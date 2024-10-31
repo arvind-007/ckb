@@ -144,6 +144,7 @@
         font-family: arial, verdana, tahoma;
         font-size: 14px;
         box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5)
+        width:125px;
       }
 
       .nav li a:hover,
@@ -183,6 +184,18 @@
 
       .dead {
         background-color: #338c02;
+      }
+      .arrow{
+        position: absolute;
+        bottom: -10px;
+        left: 52px;
+        padding: 7px 2px;
+        background: #ffc008;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        color: #000000;
+        z-index: 1;
       }
     </style>
     <link
@@ -801,8 +814,8 @@
           if ($(this).children("i").length > 0) {
             $(this)
               .children("i")
-              .toggleClass("fa-minus-square")
-              .toggleClass("fa-plus-square");
+              .toggleClass("fa-caret-up")
+              .toggleClass("fa-caret-down");
           }
           $(this).next("ul").toggle();
         });
@@ -811,7 +824,7 @@
           if ($(this).children("ul").length > 0) {
             $(this)
               .children("a")
-              .append('&nbsp;&nbsp;&nbsp;<i class="fa fa-plus-square"></i>');
+              .append('<i class="fa fa-caret-down" class="arrow"></i>');
           }
         });
 
