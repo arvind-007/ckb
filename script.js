@@ -576,7 +576,7 @@ var data = {
               name_ = name.slice(0, -1);
             }
             const node = document.createTextNode(name_);
-            a.appendChild(img);
+            //a.appendChild(img);
             span.appendChild(node)
             a.appendChild(span);
             li.appendChild(a);
