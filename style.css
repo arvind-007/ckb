@@ -178,7 +178,7 @@
       }
 
       .dead {
-        background-color: #338c02;
+        background-color: #720202;
       }
       .arrow{
         position: absolute;
@@ -191,4 +191,18 @@
         height: 20px;
         color: #000000;
         z-index: 1;
+      }
+
+      .total{
+        position: fixed;
+        top: 0;
+        right: 0;
+        color: white;
+        display: flex;
+        flex-direction: column;
+      }
+      .total span{
+        padding: 5px 10px;
+        background-color: #000000;
+        color: white;
       }
