@@ -263,7 +263,7 @@ var data = [
     parent_id: 29,
     image: "",
     dead: 0,
-    yob: "",
+    yob: "1987",
     yod: "",
   },
   {
@@ -272,7 +272,7 @@ var data = [
     parent_id: 29,
     image: "",
     dead: 0,
-    yob: "",
+    yob: "1989",
     yod: "",
   },
   {
@@ -345,7 +345,7 @@ var data = [
     parent_id: 42,
     image: "",
     dead: 0,
-    yob: "",
+    yob: "1998",
     yod: "",
   },
   {
