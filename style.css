@@ -221,6 +221,16 @@ a {
   flex-direction: column;
 }
 
+.add_new .btn{
+  padding: 5px;
+  border-radius: 5px;
+  margin: 10px;
+  box-shadow: rgba(0, 123, 255, 0.01) 0px 0px 0px 0.0779225px;
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
 .total span {
   padding: 5px 10px;
   background-color: #000000;
