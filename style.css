@@ -157,6 +157,11 @@
         border-color: #94a0b4;
       }
 
+     .nav li a img{
+          height: 70px;
+          width: 100%;
+          border-radius: 4px 4px 0px 0px;
+     }
       a {
         cursor: pointer;
       }
