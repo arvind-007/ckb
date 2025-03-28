@@ -2,7 +2,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
-    <link rel="stylesheet" href="https://arvind-007.github.io/ckb/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -22,7 +22,28 @@
       <button name="btn-show-all" id="btn-show-all">+ All</button>
       <button name="btn-hide-all" id="btn-hide-all">- All</button>
     </div-->
-    <nav class="nav" id="root"></nav>
-    <script src="https://arvind-007.github.io/ckb/script.js"></script>
+    <div class="total">
+      <span name="btn-show-all">टोटल: <span id="total">0</span></span>
+      <span name="btn-hide-all"
+        >टोटल ज़िंदा: <span id="total_alive">0</span></span
+      >
+    </div>
+    <nav class="nav">
+      <ul>
+        <li id="root">
+          <a>
+            <img
+              src="https://arvind-007.github.io/ckb/imgs/male_man.png"
+              style="height: 70px; width: 100%"
+            />
+            <span style="display: block; width: 100%; padding: 5px 10px"
+              >सलूण गाँव (नागौर) से आये हुए</span
+            >
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
