@@ -2335,7 +2335,7 @@ var data = [
     parent_id: 274,
     image: "",
     dead: 0,
-    yob: "",
+    yob: "1986",
     yod: "",
   },
   {
