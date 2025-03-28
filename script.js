@@ -18,7 +18,7 @@ var renderName = (ele, id) => {
       let default_img = "https://arvind-007.github.io/ckb/imgs/male_man.png";
       let user_img = `https://arvind-007.github.io/ckb/img/${child.image}.jpg`;
       const li = document.createElement("li");
-      li.innerHtml(`<a class="${cls}"><img src="${user_img}" onerror="this.src='${default_img}'"><span>${child.name}</span></a>`);
+      li.innerHTML = `<a class="${cls}"><img src="${user_img}" onerror="this.src='${default_img}'"><span>${child.name}</span></a>`;
       renderName(li, child.id);
       ul.appendChild(li);
     });
