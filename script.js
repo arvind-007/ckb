@@ -17,7 +17,7 @@ var renderName = (ele, id) => {
       const li = document.createElement("li");
       const a = document.createElement("a");
       const img = document.createElement("img");      
-      img.src = `https://arvind-007.github.io/ckb/img/{child.image}.jpg`;
+      img.src = `https://arvind-007.github.io/ckb/img/${child.image}.jpg`;
       img.onerror = this.src = "https://arvind-007.github.io/ckb/imgs/male_man.jpg";
       const span = document.createElement("span");
       span.style.display = "block";
