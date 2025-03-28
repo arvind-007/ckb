@@ -318,7 +318,7 @@ var data = [
     parent_id: 28,
     image: "",
     dead: 0,
-    yob: "",
+    yob: "1959",
     yod: "",
   },
   {
@@ -2573,7 +2573,7 @@ var data = [
     parent_id: 294,
     image: "",
     dead: 0,
-    yob: "",
+    yob: "1955",
     yod: "",
   },
   {
@@ -2600,7 +2600,7 @@ var data = [
     parent_id: 305,
     image: "",
     dead: 0,
-    yob: "",
+    yob: "1985",
     yod: "",
   },
   {
@@ -2609,7 +2609,7 @@ var data = [
     parent_id: 308,
     image: "",
     dead: 0,
-    yob: "",
+    yob: "2019",
     yod: "",
   },
   {
@@ -2735,7 +2735,7 @@ var data = [
     parent_id: 322,
     image: "",
     dead: 0,
-    yob: "",
+    yob: "1953",
     yod: "",
   },
   {
