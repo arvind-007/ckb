@@ -15,7 +15,7 @@ var renderName = (ele, id) => {
     children.map((child) => {
       let cls = child.dead == 1 ? "dead" : "alive";
       let default_img = "https://arvind-007.github.io/ckb/imgs/male_man.jpg";
-      let user_img = `https://arvind-007.github.io/ckb/img/${child.id}.jpg`;
+      let user_img = `https://arvind-007.github.io/ckb/imgs/${child.id}.jpg`;
       let age = 0;
       if (child.yob != "") {
         if (child.yod != "") {
