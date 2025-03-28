@@ -15,9 +15,20 @@ var renderName = (ele, id) => {
     children.map((child) => {
       let cls = child.dead == 1 ? "dead" : "alive";
       let default_img = "https://arvind-007.github.io/ckb/imgs/male_man.jpg";
-      let user_img = `https://arvind-007.github.io/ckb/img/${child.image}.jpg`;
+      let user_img = `https://arvind-007.github.io/ckb/img/${child.id}.jpg`;
+      let age = 0;
+      if (child.yob != "") {
+        if (child.yod != "") {
+          age = child.yod - child.yob;
+        } else {
+          age = new Date().getFullYear() - child.yob;
+        }
+      }
+
       const li = document.createElement("li");
-      li.innerHTML = `<a class="${cls}"><img src="${user_img}" onerror="this.src='${default_img}'"><span>${child.name}</span></a>`;
+      li.innerHTML = `<a class="${cls}"><img src="${user_img}" onerror="this.src='${default_img}'"><span>${
+        child.name
+      }${age ? ` (${age}y)` : ""}</span></a>`;
       renderName(li, child.id);
       ul.appendChild(li);
     });
