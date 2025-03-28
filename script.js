@@ -14,21 +14,11 @@ var renderName = (ele, id) => {
   if (children.length > 0) {
     const ul = document.createElement("ul");
     children.map((child) => {
+      let cls = child.dead == 1 ? "dead" : "alive";
+      let default_img = "https://arvind-007.github.io/ckb/imgs/male_man.png";
+      let user_img = `https://arvind-007.github.io/ckb/img/${child.image}.jpg`;
       const li = document.createElement("li");
-      const a = document.createElement("a");
-      const img = document.createElement("img");      
-      img.src = `https://arvind-007.github.io/ckb/img/${child.image}.jpg`;
-      img.onerror = this.src = "https://arvind-007.github.io/ckb/imgs/male_man.jpg";
-      const span = document.createElement("span");
-      span.style.display = "block";
-      span.style.width = "100%";
-      span.style.padding = "5px 10px";
-      if (child.dead == 1) a.classList.add("dead");
-      const node = document.createTextNode(child.name);
-      a.appendChild(img);
-      span.appendChild(node);
-      a.appendChild(span);
-      li.appendChild(a);
+      li.innerHtml(`<a class="${cls}"><img src="${user_img}" onerror="this.src='${default_img}'"><span>${child.name}</span></a>`);
       renderName(li, child.id);
       ul.appendChild(li);
     });
