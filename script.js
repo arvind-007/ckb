@@ -14,7 +14,10 @@ var renderName = (ele, id) => {
     const ul = document.createElement("ul");
     children.map((child) => {
       let cls = child.dead == 1 ? "dead" : "alive";
-      let default_img = "https://arvind-007.github.io/ckb/imgs/male_man.jpg";
+      let img_do = "https://arvind-007.github.io/ckb/imgs/do.jpg";
+      let img_dy = "https://arvind-007.github.io/ckb/imgs/do.jpg";
+      let img_dk = "https://arvind-007.github.io/ckb/imgs/do.jpg";
+
       let user_img = `https://arvind-007.github.io/ckb/imgs/${child.id}.jpg`;
       let age = 0;
       if (child.yob != "") {
@@ -23,6 +26,14 @@ var renderName = (ele, id) => {
         } else {
           age = new Date().getFullYear() - child.yob;
         }
+      }
+
+      if (age < 15) {
+        default_img = img_dk;
+      } else if (age < 50) {
+        default_img = img_dy;
+      } else {
+        default_img = img_do;
       }
 
       const li = document.createElement("li");
