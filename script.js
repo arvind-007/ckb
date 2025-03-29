@@ -15,8 +15,8 @@ var renderName = (ele, id) => {
     children.map((child) => {
       let cls = child.dead == 1 ? "dead" : "alive";
       let img_do = "https://arvind-007.github.io/ckb/imgs/do.jpg";
-      let img_dy = "https://arvind-007.github.io/ckb/imgs/do.jpg";
-      let img_dk = "https://arvind-007.github.io/ckb/imgs/do.jpg";
+      let img_dy = "https://arvind-007.github.io/ckb/imgs/dy.jpg";
+      let img_dk = "https://arvind-007.github.io/ckb/imgs/dk.jpg";
 
       let user_img = `https://arvind-007.github.io/ckb/imgs/${child.id}.jpg`;
       let age = 0;
