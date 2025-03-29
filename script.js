@@ -28,9 +28,9 @@ var renderName = (ele, id) => {
         }
       }
 
-      if (age < 15) {
+      if (age > 0 && age <= 15) {
         default_img = img_dk;
-      } else if (age < 50) {
+      } else if (age > 15 && age <= 50) {
         default_img = img_dy;
       } else {
         default_img = img_do;
