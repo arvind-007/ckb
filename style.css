@@ -44,6 +44,7 @@ h1 {
   margin: 20px auto;
   width: 100%;
   min-height: auto;
+  margin-bottom: 50px;
 }
 
 .nav ul {
@@ -203,40 +204,29 @@ a {
   z-index: 1;
 }
 
-.total {
+
+.top-fixed-bar{
   position: fixed;
   top: 0;
-  right: 0;
   color: white;
   display: flex;
   flex-direction: column;
   z-index: 100;
-}
-
-.total span {
-  padding: 5px 10px;
-  background-color: #000000;
-  color: white;
-}
-
-.add_new{
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  z-index: 100;
-}
-
-.add_new .btn{
-  padding: 5px;
-  border-radius: 5px;
-  margin: 10px;
-  box-shadow: rgba(0, 123, 255, 0.01) 0px 0px 0px 0.0779225px;
-  color: #fff;
+  width: 100%;
   background-color: #28a745;
-  border-color: #28a745;
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+}
+.top-fixed-bar div{
+  padding: 5px 10px;
+}
+.top-fixed-bar .total{
+  width: 210px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: right;
 }
 
 li .fa{

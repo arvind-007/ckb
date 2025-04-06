@@ -49,6 +49,9 @@ var renderName = (ele, id) => {
 renderName(root, 1);
 
 $(function () {
+  $("#btn-show-all").click(function () {
+    $("ul").show();
+  });
   $("a").click(function () {
     if ($(this).children("i").length > 0) {
       $(this)

@@ -52,6 +52,7 @@ var data = [
     dead: 1,
     yob: "",
     yod: "",
+    active: 1,
   },
   {
     id: 7,
@@ -2326,7 +2327,7 @@ var data = [
     parent_id: 262,
     image: "",
     dead: 0,
-    yob: "",
+    yob: "1960",
     yod: "",
   },
   {
@@ -2336,6 +2337,24 @@ var data = [
     image: "",
     dead: 0,
     yob: "1986",
+    yod: "",
+  },
+  {
+    id: 366,
+    name: "नितीश",
+    parent_id: 275,
+    image: "",
+    dead: 0,
+    yob: "2012",
+    yod: "",
+  },
+  {
+    id: 367,
+    name: "साहिल",
+    parent_id: 275,
+    image: "",
+    dead: 0,
+    yob: "2006",
     yod: "",
   },
   {
@@ -2349,7 +2368,7 @@ var data = [
   },
   {
     id: 277,
-    name: "बजरंग लाल",
+    name: "बजरंगलाल",
     parent_id: 276,
     image: "",
     dead: 0,
@@ -3004,9 +3023,9 @@ var data = [
     name: "मदनलाल",
     parent_id: 352,
     image: "",
-    dead: 0,
-    yob: "",
-    yod: "",
+    dead: 1,
+    yob: "1953",
+    yod: "2025",
   },
   {
     id: 354,
@@ -3041,7 +3060,7 @@ var data = [
     parent_id: 353,
     image: "",
     dead: 0,
-    yob: "",
+    yob: "1987",
     yod: "",
   },
   {
