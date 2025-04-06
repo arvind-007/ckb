@@ -515,8 +515,8 @@ var data = [
     parent_id: 61,
     image: "",
     dead: 1,
-    yob: "",
-    yod: "",
+    yob: "1935",
+    yod: "2003",
   },
   {
     id: 63,
@@ -551,8 +551,8 @@ var data = [
     parent_id: 61,
     image: "",
     dead: 1,
-    yob: "",
-    yod: "",
+    yob: "1937",
+    yod: "2003",
   },
   {
     id: 67,

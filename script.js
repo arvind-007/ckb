@@ -54,13 +54,13 @@ function load_default_img(ele, age, generation) {
     default_img = img_do;
   }
   //if more than 4th generation show young image
-  if (generation > 3) {
+  if (generation > 3 && generation <= 5) {
     default_img = img_doo;
-  } else if (generation > 6) {
+  } else if (generation > 5 && generation <= 7) {
     default_img = img_dyo;
   } else if (generation > 7) {
     //Show kids image
-    default_img = img_do;
+    default_img = img_dk;
   }
   ele.src = default_img;
 }
