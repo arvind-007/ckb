@@ -1,6 +1,7 @@
 // import data from "./data.json";
 
 const root = document.getElementById("root");
+var generation = 0;
 var renderName = (ele, id) => {
   // Check if there is any object with id in data
   const obj = data.find((o) => o.id == id);
@@ -11,12 +12,15 @@ var renderName = (ele, id) => {
   //check if it has children
   const children = data.filter((o) => o.parent_id == id);
   if (children.length > 0) {
+    generation++;
     const ul = document.createElement("ul");
     children.map((child) => {
       let cls = child.dead == 1 ? "dead" : "alive";
       let img_do = "https://arvind-007.github.io/ckb/imgs/do.jpg";
       let img_dy = "https://arvind-007.github.io/ckb/imgs/dy.jpg";
       let img_dk = "https://arvind-007.github.io/ckb/imgs/dk.jpg";
+      let img_doo = "https://arvind-007.github.io/ckb/imgs/doo.jpg";
+      let img_dyo = "https://arvind-007.github.io/ckb/imgs/dyo.jpg";
 
       let user_img = `https://arvind-007.github.io/ckb/imgs/${child.id}.jpg`;
       let age = 0;
@@ -35,15 +39,24 @@ var renderName = (ele, id) => {
       } else {
         default_img = img_do;
       }
-
+      //if more than 4th generation show young image
+      if (generation > 3) {
+        default_img = img_doo;
+      } else if (generation > 6) {
+        default_img = img_dyo;
+      } else if (generation > 7) {
+        //Show kids image
+        default_img = img_do;
+      }
       const li = document.createElement("li");
       li.innerHTML = `<a class="${cls}"><img src="${user_img}" onerror="this.src='${default_img}'"><span>${
         child.name
-      }${age ? ` (${age}y)` : ""}</span></a>`;
+      }${age ? ` (${age})` : ""}</span></a>`;
       renderName(li, child.id);
       ul.appendChild(li);
     });
     ele.appendChild(ul);
+    generation--;
   }
 };
 renderName(root, 1);
