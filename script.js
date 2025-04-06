@@ -16,11 +16,6 @@ var renderName = (ele, id) => {
     const ul = document.createElement("ul");
     children.map((child) => {
       let cls = child.dead == 1 ? "dead" : "alive";
-      let img_do = "https://arvind-007.github.io/ckb/imgs/do.jpg";
-      let img_dy = "https://arvind-007.github.io/ckb/imgs/dy.jpg";
-      let img_dk = "https://arvind-007.github.io/ckb/imgs/dk.jpg";
-      let img_doo = "https://arvind-007.github.io/ckb/imgs/doo.jpg";
-      let img_dyo = "https://arvind-007.github.io/ckb/imgs/dyo.jpg";
 
       let user_img = `https://arvind-007.github.io/ckb/imgs/${child.id}.jpg`;
       let age = 0;
@@ -32,24 +27,8 @@ var renderName = (ele, id) => {
         }
       }
 
-      if (age > 0 && age <= 15) {
-        default_img = img_dk;
-      } else if (age > 15 && age <= 50) {
-        default_img = img_dy;
-      } else {
-        default_img = img_do;
-      }
-      //if more than 4th generation show young image
-      if (generation > 3) {
-        default_img = img_doo;
-      } else if (generation > 6) {
-        default_img = img_dyo;
-      } else if (generation > 7) {
-        //Show kids image
-        default_img = img_do;
-      }
       const li = document.createElement("li");
-      li.innerHTML = `<a class="${cls}"><img src="${user_img}" onerror="this.src='${default_img}'"><span>${
+      li.innerHTML = `<a class="${cls}"><img src="${user_img}" onerror="load_default_img(this, ${age}, ${generation})"><span>${
         child.name
       }${age ? ` (${age})` : ""}</span></a>`;
       renderName(li, child.id);
@@ -60,6 +39,31 @@ var renderName = (ele, id) => {
   }
 };
 renderName(root, 1);
+
+function load_default_img(ele, age, generation) {
+  let img_do = "https://arvind-007.github.io/ckb/imgs/do.jpg";
+  let img_dy = "https://arvind-007.github.io/ckb/imgs/dy.jpg";
+  let img_dk = "https://arvind-007.github.io/ckb/imgs/dk.jpg";
+  let img_doo = "https://arvind-007.github.io/ckb/imgs/doo.jpg";
+  let img_dyo = "https://arvind-007.github.io/ckb/imgs/dyo.jpg";
+  if (age > 0 && age <= 15) {
+    default_img = img_dk;
+  } else if (age > 15 && age <= 50) {
+    default_img = img_dy;
+  } else {
+    default_img = img_do;
+  }
+  //if more than 4th generation show young image
+  if (generation > 3) {
+    default_img = img_doo;
+  } else if (generation > 6) {
+    default_img = img_dyo;
+  } else if (generation > 7) {
+    //Show kids image
+    default_img = img_do;
+  }
+  ele.src = default_img;
+}
 
 $(function () {
   $("#btn-show-all").click(function () {
